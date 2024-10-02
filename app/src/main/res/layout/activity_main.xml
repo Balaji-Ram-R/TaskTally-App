@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is a layout container that organizes its child views relative to each other or to the parent layout. In a RelativeLayout, you can position elements like a TextView or a Button relative to other elements (e.g., below or next to them) or relative to the parent (e.g., centered, aligned left or right).
+Attributes:
+xmlns:android="http://schemas.android.com/apk/res/android": This is an XML namespace declaration for Android attributes like layout_width, text, etc. It tells the layout file where to find definitions for Android-specific attributes.
+xmlns:app="http://schemas.android.com/apk/res-auto": This is used for attributes related to custom views or libraries that you might include in the project.
+xmlns:tools="http://schemas.android.com/tools": This is used for attributes that are only used by Android Studio during design time (e.g., to provide preview data) and are not included in the APK. -->
+<RelativeLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--A TextView is a UI element that displays text to the user. It’s used here as a title for the Task Manager interface -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="301dp"
+        android:layout_height="116dp"
+        android:layout_centerInParent="true"
+        android:text="Task-Tally Let your tasks do the talking"
+        android:textColor="#078DF4"
+        android:textFontWeight="1000"
+        android:textSize="32.dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="32.dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+</RelativeLayout>
